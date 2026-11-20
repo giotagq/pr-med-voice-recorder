@@ -1,0 +1,823 @@
+{
+  "version": "2.0",
+  "locale": "es-PR",
+  "domain": "patient_post_visit_updates",
+  "prompts": [
+    {
+      "id": "vref_001",
+      "category": "voice_ref",
+      "text": "Hola, este es mi resumen diario después de la visita al médico. Esta mañana me levanté tranquilo, me tomé la presión en casa y desayuné liviano antes de tomarme las pastillas de la mañana. Me siento un poco mejor que ayer y voy a seguir observando cómo me va durante el día.",
+      "key_terms": ["médico", "presión", "pastillas"]
+    },
+    {
+      "id": "vref_002",
+      "category": "voice_ref",
+      "text": "Buenas tardes, quería dejar grabado cómo me he sentido hoy desde que el doctor me ajustó el tratamiento. Dormí bastante bien anoche, tomé mucha agua y no tuve mareos ni fatiga cuando salí a caminar un ratito por la mañana.",
+      "key_terms": ["doctor", "tratamiento", "mareos", "fatiga"]
+    },
+    {
+      "id": "med_001",
+      "category": "medications_dosages",
+      "text": "Hoy me tomé la metformina de quinientos miligramos después del desayuno y no me cayó pesada al estómago.",
+      "key_terms": ["metformina", "miligramos"]
+    },
+    {
+      "id": "med_002",
+      "category": "medications_dosages",
+      "text": "Ayer el doctor me subió el losartán de cincuenta a cien miligramos porque la presión seguía un poco alta.",
+      "key_terms": ["doctor", "losartán", "miligramos", "presión"]
+    },
+    {
+      "id": "med_003",
+      "category": "medications_dosages",
+      "text": "Me tomé la levotiroxina de setenta y cinco microgramos en ayunas y esperé una hora antes del café.",
+      "key_terms": ["levotiroxina", "microgramos", "ayunas"]
+    },
+    {
+      "id": "med_004",
+      "category": "medications_dosages",
+      "text": "Esta noche me toca la atorvastatina de veinte miligramos antes de acostarme, todavía no siento dolores musculares.",
+      "key_terms": ["atorvastatina", "miligramos"]
+    },
+    {
+      "id": "med_005",
+      "category": "medications_dosages",
+      "text": "Usé la bomba de albuterol dos veces hoy, una por la mañana y otra después de almuerzo cuando me dio un poco de fatiga.",
+      "key_terms": ["bomba", "albuterol", "fatiga"]
+    },
+    {
+      "id": "med_006",
+      "category": "medications_dosages",
+      "text": "Me inyecté dieciocho unidades de insulina basal antes de dormir y amanecí bastante estable.",
+      "key_terms": ["insulina", "unidades"]
+    },
+    {
+      "id": "med_007",
+      "category": "medications_dosages",
+      "text": "Llevo tres días con la amoxicilina de quinientos miligramos cada ocho horas y ya casi no me duele la garganta.",
+      "key_terms": ["amoxicilina", "miligramos"]
+    },
+    {
+      "id": "med_008",
+      "category": "medications_dosages",
+      "text": "El omeprazol de veinte miligramos antes del desayuno me quitó bastante la acidez de anoche.",
+      "key_terms": ["omeprazol", "miligramos", "acidez"]
+    },
+    {
+      "id": "med_009",
+      "category": "medications_dosages",
+      "text": "Desde que empecé con el lisinopril de diez miligramos noto una tosecita seca por las tardes.",
+      "key_terms": ["lisinopril", "miligramos"]
+    },
+    {
+      "id": "med_010",
+      "category": "medications_dosages",
+      "text": "Hoy me tomé la amlodipina de cinco miligramos temprano, pero noto los tobillos un poquito hinchados al final del día.",
+      "key_terms": ["amlodipina", "miligramos"]
+    },
+    {
+      "id": "med_011",
+      "category": "medications_dosages",
+      "text": "La doctora me recetó prednisona por cinco días bajando la dosis poco a poco y hoy voy por el segundo día.",
+      "key_terms": ["doctora", "prednisona", "dosis"]
+    },
+    {
+      "id": "med_012",
+      "category": "medications_dosages",
+      "text": "Me tomé dos pastillas de acetaminofén de quinientos miligramos porque amanecí con dolor de cabeza fuerte.",
+      "key_terms": ["pastillas", "acetaminofén", "miligramos"]
+    },
+    {
+      "id": "med_013",
+      "category": "medications_dosages",
+      "text": "Ayer me puse la inyección semanal de ozempic y hoy siento un poquito de náuseas pero puedo comer.",
+      "key_terms": ["inyección", "ozempic", "náuseas"]
+    },
+    {
+      "id": "med_014",
+      "category": "medications_dosages",
+      "text": "Estoy tomando gabapentina de trescientos miligramos por la noche y me ha bajado el hormigueo en los pies.",
+      "key_terms": ["gabapentina", "miligramos", "hormigueo"]
+    },
+    {
+      "id": "med_015",
+      "category": "medications_dosages",
+      "text": "El cardiólogo me dejó la aspirina de ochenta y un miligramos y el clopidogrel todos los días sin fallar.",
+      "key_terms": ["cardiólogo", "aspirina", "miligramos", "clopidogrel"]
+    },
+    {
+      "id": "med_016",
+      "category": "medications_dosages",
+      "text": "Me tomé la furosemida de cuarenta miligramos a las ocho de la mañana y fui bastante al baño como me avisó el médico.",
+      "key_terms": ["furosemida", "miligramos", "médico"]
+    },
+    {
+      "id": "med_017",
+      "category": "medications_dosages",
+      "text": "La azitromicina ya la terminé hoy, era el último día del tratamiento y la infección del oído está mucho mejor.",
+      "key_terms": ["azitromicina", "infección"]
+    },
+    {
+      "id": "med_018",
+      "category": "medications_dosages",
+      "text": "Me estoy echando las gotas en el ojo derecho cada seis horas y la crema alrededor del párpado como dice la receta.",
+      "key_terms": ["gotas", "crema", "receta"]
+    },
+    {
+      "id": "med_019",
+      "category": "medications_dosages",
+      "text": "El metoprolol de veinticinco miligramos me mantiene el pulso tranquilo, hoy no me dieron palpitaciones.",
+      "key_terms": ["metoprolol", "miligramos", "pulso", "palpitaciones"]
+    },
+    {
+      "id": "med_020",
+      "category": "medications_dosages",
+      "text": "Anoche me tomé el montelukast y la cetirizina de diez miligramos y amanecí con mucha menos congestión.",
+      "key_terms": ["montelukast", "cetirizina", "miligramos", "congestión"]
+    },
+    {
+      "id": "med_021",
+      "category": "medications_dosages",
+      "text": "Me cambiaron de omeprazol a pantoprazol de cuarenta miligramos y ya no siento el reflujo cuando me acuesto.",
+      "key_terms": ["omeprazol", "pantoprazol", "miligramos", "reflujo"]
+    },
+    {
+      "id": "med_022",
+      "category": "medications_dosages",
+      "text": "El ibuprofeno de cuatrocientos miligramos con comida me ayudó bastante con la inflamación en la espalda baja.",
+      "key_terms": ["ibuprofeno", "miligramos", "inflamación"]
+    },
+    {
+      "id": "med_023",
+      "category": "medications_dosages",
+      "text": "Llevo dos semanas con la sertralina de cincuenta miligramos y siento que estoy durmiendo un poco más corrido.",
+      "key_terms": ["sertralina", "miligramos"]
+    },
+    {
+      "id": "med_024",
+      "category": "medications_dosages",
+      "text": "El doctor me empezó jardiance de diez miligramos junto con la metformina para controlar mejor la azúcar.",
+      "key_terms": ["doctor", "jardiance", "miligramos", "metformina", "azúcar"]
+    },
+    {
+      "id": "med_025",
+      "category": "medications_dosages",
+      "text": "Hoy me tomé diez mililitros del jarabe para la tos después de cenar y me aflojó bastante la flema.",
+      "key_terms": ["mililitros", "jarabe", "tos", "flema"]
+    },
+    {
+      "id": "vit_001",
+      "category": "vitals_labs",
+      "text": "Me chequié la presión esta mañana antes del desayuno y me salió en ciento veintiséis sobre ochenta y dos.",
+      "key_terms": ["presión"]
+    },
+    {
+      "id": "vit_002",
+      "category": "vitals_labs",
+      "text": "El azúcar en ayunas hoy estuvo en ciento treinta y cuatro, bajó un poquito comparado con la semana pasada.",
+      "key_terms": ["azúcar", "ayunas"]
+    },
+    {
+      "id": "vit_003",
+      "category": "vitals_labs",
+      "text": "Dos horas después de almuerzo me medí la glucosa y estaba en ciento sesenta y ocho.",
+      "key_terms": ["glucosa"]
+    },
+    {
+      "id": "vit_004",
+      "category": "vitals_labs",
+      "text": "Me puse el oxímetro hace un ratito y el oxígeno estaba en noventa y ocho por ciento con el pulso en setenta y seis.",
+      "key_terms": ["oxímetro", "oxígeno", "pulso"]
+    },
+    {
+      "id": "vit_005",
+      "category": "vitals_labs",
+      "text": "Anoche tuve fiebre en ciento uno punto dos, pero hoy por la mañana la temperatura bajó a noventa y ocho punto seis.",
+      "key_terms": ["fiebre", "temperatura"]
+    },
+    {
+      "id": "vit_006",
+      "category": "vitals_labs",
+      "text": "Hoy recogí los resultados de los laboratorios y la hemoglobina glucosilada me bajó a seis punto ocho.",
+      "key_terms": ["laboratorios", "hemoglobina"]
+    },
+    {
+      "id": "vit_007",
+      "category": "vitals_labs",
+      "text": "En el panel de lípidos el colesterol malo salió un poco alto y los triglicéridos en ciento noventa.",
+      "key_terms": ["colesterol", "triglicéridos"]
+    },
+    {
+      "id": "vit_008",
+      "category": "vitals_labs",
+      "text": "Me pesé hoy sin zapatos como me pidió el cardiólogo y subí dos libras desde el lunes.",
+      "key_terms": ["cardiólogo"]
+    },
+    {
+      "id": "vit_009",
+      "category": "vitals_labs",
+      "text": "Esta tarde la presión me subió a ciento cuarenta y ocho sobre noventa y dos después de pasar un mal rato.",
+      "key_terms": ["presión"]
+    },
+    {
+      "id": "vit_010",
+      "category": "vitals_labs",
+      "text": "La prueba de la tiroides salió dentro de lo normal, así que la doctora me dejó la misma dosis.",
+      "key_terms": ["tiroides", "doctora", "dosis"]
+    },
+    {
+      "id": "vit_011",
+      "category": "vitals_labs",
+      "text": "Hoy el pulso estuvo un poquito rápido en noventa y cinco cuando subí las escaleras, pero bajó rápido al sentarme.",
+      "key_terms": ["pulso"]
+    },
+    {
+      "id": "vit_012",
+      "category": "vitals_labs",
+      "text": "Ayer me hicieron un electrocardiograma en la oficina y el doctor dijo que el ritmo se veía normal.",
+      "key_terms": ["electrocardiograma", "doctor"]
+    },
+    {
+      "id": "vit_013",
+      "category": "vitals_labs",
+      "text": "La presión por la noche me salió en ciento dieciocho sobre setenta y seis, súper buena hoy.",
+      "key_terms": ["presión"]
+    },
+    {
+      "id": "vit_014",
+      "category": "vitals_labs",
+      "text": "Hoy me sentí tembloroso a media tarde, me chequié el azúcar y estaba bajita en sesenta y ocho, así que tomé jugo.",
+      "key_terms": ["azúcar"]
+    },
+    {
+      "id": "vit_015",
+      "category": "vitals_labs",
+      "text": "Me mandaron a repetir los análisis de orina y sangre la semana que viene para revisar los riñones.",
+      "key_terms": ["análisis"]
+    },
+    {
+      "id": "vit_016",
+      "category": "vitals_labs",
+      "text": "El oxígeno se ha mantenido entre noventa y siete y noventa y nueve todo el día sin usar la bomba.",
+      "key_terms": ["oxígeno", "bomba"]
+    },
+    {
+      "id": "vit_017",
+      "category": "vitals_labs",
+      "text": "El monitor holter lo tuve puesto veinticuatro horas y ya lo devolví esta mañana a la clínica.",
+      "key_terms": ["holter", "clínica"]
+    },
+    {
+      "id": "vit_018",
+      "category": "vitals_labs",
+      "text": "La temperatura me subió a cien punto cuatro por la tarde con un poquito de escalofríos.",
+      "key_terms": ["temperatura", "escalofríos"]
+    },
+    {
+      "id": "vit_019",
+      "category": "vitals_labs",
+      "text": "El endocrinólogo revisó mi libreta de glucosa y dijo que las mañanas van mejorando bastante.",
+      "key_terms": ["endocrinólogo", "glucosa"]
+    },
+    {
+      "id": "vit_020",
+      "category": "vitals_labs",
+      "text": "Me dieron los resultados de la placa de pecho y gracias a Dios no salió pulmonía.",
+      "key_terms": ["placa"]
+    },
+    {
+      "id": "sym_001",
+      "category": "symptoms_pr",
+      "text": "Hoy amanecí con mucha menos fatiga, pude caminar por la casa sin quedarme sin aire.",
+      "key_terms": ["fatiga"]
+    },
+    {
+      "id": "sym_002",
+      "category": "symptoms_pr",
+      "text": "Todavía tengo un catarro pegado con mucha congestión nasal y flema clara por la mañana.",
+      "key_terms": ["catarro", "congestión", "flema"]
+    },
+    {
+      "id": "sym_003",
+      "category": "symptoms_pr",
+      "text": "Me dio un mareo leve cuando me levanté rápido de la silla, pero se me pasó en un minuto.",
+      "key_terms": ["mareo"]
+    },
+    {
+      "id": "sym_004",
+      "category": "symptoms_pr",
+      "text": "Me salió un salpullido rojo en los brazos con bastante picor desde que empecé el antibiótico nuevo.",
+      "key_terms": ["salpullido", "picor"]
+    },
+    {
+      "id": "sym_005",
+      "category": "symptoms_pr",
+      "text": "Hoy tengo menos hinchazón en las piernas porque las mantuve arriba un rato por la tarde.",
+      "key_terms": ["hinchazón"]
+    },
+    {
+      "id": "sym_006",
+      "category": "symptoms_pr",
+      "text": "Anoche casi no pude dormir por el insomnio y una tos seca que no me dejaba tranquilo.",
+      "key_terms": ["insomnio", "tos"]
+    },
+    {
+      "id": "sym_007",
+      "category": "symptoms_pr",
+      "text": "Hoy no tuve vómitos ni diarrea, pude comer arroz blanco y sopita sin problemas.",
+      "key_terms": ["vómitos", "diarrea"]
+    },
+    {
+      "id": "sym_008",
+      "category": "symptoms_pr",
+      "text": "Sigo con un poquito de estreñimiento desde que me operaron, así que estoy tomando más agua y fibra.",
+      "key_terms": ["estreñimiento"]
+    },
+    {
+      "id": "sym_009",
+      "category": "symptoms_pr",
+      "text": "Esta mañana me dio una migraña fuerte con sensibilidad a la luz y tuve que acostarme a oscuras.",
+      "key_terms": ["migraña"]
+    },
+    {
+      "id": "sym_010",
+      "category": "symptoms_pr",
+      "text": "Siento calambres en las pantorrillas por la noche, especialmente cuando hace calor y no tomo suficiente agua.",
+      "key_terms": ["calambres"]
+    },
+    {
+      "id": "sym_011",
+      "category": "symptoms_pr",
+      "text": "El pecho ya no me silba tanto como ayer, el asma parece estar cediendo con el tratamiento.",
+      "key_terms": ["asma"]
+    },
+    {
+      "id": "sym_012",
+      "category": "symptoms_pr",
+      "text": "A mediodía sentí unas palpitaciones rápidas por unos segundos, pero no tuve dolor de pecho ni falta de aire.",
+      "key_terms": ["palpitaciones"]
+    },
+    {
+      "id": "sym_013",
+      "category": "symptoms_pr",
+      "text": "El vértigo estuvo mucho más suave hoy, ya puedo virar la cabeza sin sentir que todo me da vueltas.",
+      "key_terms": ["vértigo"]
+    },
+    {
+      "id": "sym_014",
+      "category": "symptoms_pr",
+      "text": "La alergia del polvo del Sahara me tiene los ojos llorosos y la garganta con picor desde ayer.",
+      "key_terms": ["alergia", "picor"]
+    },
+    {
+      "id": "sym_015",
+      "category": "symptoms_pr",
+      "text": "Todavía siento un hormigueo suave en los dedos de la mano izquierda cuando me levanto.",
+      "key_terms": ["hormigueo"]
+    },
+    {
+      "id": "sym_016",
+      "category": "symptoms_pr",
+      "text": "Hoy amanecí con escalofríos y el cuerpo cortado, pero la prueba de influenza me salió negativa.",
+      "key_terms": ["escalofríos"]
+    },
+    {
+      "id": "sym_017",
+      "category": "symptoms_pr",
+      "text": "Después del almuerzo me dio un poquito de acidez y reflujo, creo que fue por la salsa.",
+      "key_terms": ["acidez", "reflujo"]
+    },
+    {
+      "id": "sym_018",
+      "category": "symptoms_pr",
+      "text": "Hoy no tuve episodios de taquicardia y me sentí con mucha más energía durante toda la tarde.",
+      "key_terms": ["taquicardia"]
+    },
+    {
+      "id": "sym_019",
+      "category": "symptoms_pr",
+      "text": "El moretón donde me sacaron sangre ayer ya está bajando de color y no me duele casi.",
+      "key_terms": ["moretón"]
+    },
+    {
+      "id": "sym_020",
+      "category": "symptoms_pr",
+      "text": "Siento un poquito de náuseas por la mañana, pero después de comer unas galletas se me quita.",
+      "key_terms": ["náuseas"]
+    },
+    {
+      "id": "sym_021",
+      "category": "symptoms_pr",
+      "text": "La rodilla derecha todavía amanece tiesa, pero después de caminar diez minutos se va aflojando.",
+      "key_terms": []
+    },
+    {
+      "id": "sym_022",
+      "category": "symptoms_pr",
+      "text": "Hoy tuve menos dolor en la boca del estómago y pude cenar normal sin molestias.",
+      "key_terms": []
+    },
+    {
+      "id": "sym_023",
+      "category": "symptoms_pr",
+      "text": "Me dio un poquito de fatiga subiendo la cuesta de la marquesina, pero descansé dos minutos y se me fue.",
+      "key_terms": ["fatiga"]
+    },
+    {
+      "id": "sym_024",
+      "category": "symptoms_pr",
+      "text": "La inflamación de las manos bajó bastante hoy, ya puedo cerrar los dedos sin dolor.",
+      "key_terms": ["inflamación"]
+    },
+    {
+      "id": "sym_025",
+      "category": "symptoms_pr",
+      "text": "No he tenido fiebre en cuarenta y ocho horas y el apetito por fin me volvió.",
+      "key_terms": ["fiebre"]
+    },
+    {
+      "id": "log_001",
+      "category": "pharmacy_logistics",
+      "text": "Hoy pasé por la farmacia a buscar el refill de la presión, pero me dijeron que el plan médico requiere preautorización.",
+      "key_terms": ["farmacia", "refill", "presión", "plan"]
+    },
+    {
+      "id": "log_002",
+      "category": "pharmacy_logistics",
+      "text": "Ya saqué la cita de follow-up con el cardiólogo para dentro de tres semanas a las nueve de la mañana.",
+      "key_terms": ["cita", "follow-up", "cardiólogo"]
+    },
+    {
+      "id": "log_003",
+      "category": "pharmacy_logistics",
+      "text": "El lunes me toca el CT scan del abdomen en el centro de imágenes y tengo que ir en ayunas.",
+      "key_terms": ["ct", "scan", "ayunas"]
+    },
+    {
+      "id": "log_004",
+      "category": "pharmacy_logistics",
+      "text": "Pagué el copay de la receta nueva y la farmacéutica me explicó cómo usar el inhaler correctamente.",
+      "key_terms": ["copay", "receta", "inhaler"]
+    },
+    {
+      "id": "log_005",
+      "category": "pharmacy_logistics",
+      "text": "Me aprobaron el MRI de la espalda baja, ahora estoy esperando que me llamen para darme fecha.",
+      "key_terms": ["mri"]
+    },
+    {
+      "id": "log_006",
+      "category": "pharmacy_logistics",
+      "text": "Hoy fui al laboratorio bien temprano para hacerme el blood work que ordenó la doctora.",
+      "key_terms": ["laboratorio", "doctora"]
+    },
+    {
+      "id": "log_007",
+      "category": "pharmacy_logistics",
+      "text": "Llamé a la oficina del especialista para avisar que las pastillas nuevas me estaban dando mareos.",
+      "key_terms": ["especialista", "pastillas", "mareos"]
+    },
+    {
+      "id": "log_008",
+      "category": "pharmacy_logistics",
+      "text": "La semana que viene me hago el sonograma de la tiroides y llevo los resultados en la próxima cita.",
+      "key_terms": ["sonograma", "tiroides", "cita"]
+    },
+    {
+      "id": "log_009",
+      "category": "pharmacy_logistics",
+      "text": "El neumólogo me mandó una receta electrónica nueva para la bomba y ya está lista para recoger.",
+      "key_terms": ["neumólogo", "receta", "bomba"]
+    },
+    {
+      "id": "log_010",
+      "category": "pharmacy_logistics",
+      "text": "Tuve que ir a sala de emergencias el domingo por la noche por falta de aire, pero ya me dieron de alta.",
+      "key_terms": ["emergencias"]
+    },
+    {
+      "id": "log_011",
+      "category": "pharmacy_logistics",
+      "text": "El plan médico cubrió las terapias físicas y empiezo el jueves a las dos de la tarde.",
+      "key_terms": ["plan"]
+    },
+    {
+      "id": "log_012",
+      "category": "pharmacy_logistics",
+      "text": "Me hicieron la mamografía anual hoy y todo salió rápido sin ninguna molestia.",
+      "key_terms": ["mamografía"]
+    },
+    {
+      "id": "log_013",
+      "category": "pharmacy_logistics",
+      "text": "La farmacia no tenía la dosis de cincuenta miligramos, así que me la piden para mañana al mediodía.",
+      "key_terms": ["farmacia", "dosis", "miligramos"]
+    },
+    {
+      "id": "log_014",
+      "category": "pharmacy_logistics",
+      "text": "Tengo cita de seguimiento en la clínica el viernes para que me revisen la radiografía del pie.",
+      "key_terms": ["cita", "seguimiento", "clínica", "radiografía"]
+    },
+    {
+      "id": "log_015",
+      "category": "pharmacy_logistics",
+      "text": "Todavía estoy esperando los resultados de la biopsia, la enfermera dijo que llaman en cinco días laborables.",
+      "key_terms": ["biopsia"]
+    },
+    {
+      "id": "post_001",
+      "category": "post_op_followup",
+      "text": "Hoy me lavé la herida con agua y jabón suave como indicó el cirujano y se ve seca y limpia.",
+      "key_terms": ["herida"]
+    },
+    {
+      "id": "post_002",
+      "category": "post_op_followup",
+      "text": "Los puntos ya no me jalan tanto como ayer, aunque todavía siento un poquito de picor alrededor.",
+      "key_terms": ["puntos", "picor"]
+    },
+    {
+      "id": "post_003",
+      "category": "post_op_followup",
+      "text": "Después del stent me siento mucho mejor, hoy caminé quince minutos sin sentir presión en el pecho.",
+      "key_terms": ["stent", "presión"]
+    },
+    {
+      "id": "post_004",
+      "category": "post_op_followup",
+      "text": "Hoy fue mi tercera sesión de terapia física del hombro y ya puedo levantar el brazo un poco más alto.",
+      "key_terms": ["terapia"]
+    },
+    {
+      "id": "post_005",
+      "category": "post_op_followup",
+      "text": "El nivel de dolor hoy está en un tres de diez, mucho mejor que el siete que tenía cuando salí del hospital.",
+      "key_terms": ["hospital"]
+    },
+    {
+      "id": "post_006",
+      "category": "post_op_followup",
+      "text": "Me cambié la gasa esta mañana y no había sangrado ni enrojecimiento alrededor de la cicatriz.",
+      "key_terms": []
+    },
+    {
+      "id": "post_007",
+      "category": "post_op_followup",
+      "text": "Desde la cirugía del bypass estoy siguiendo la dieta baja en sal y haciendo los ejercicios de respiración todos los días.",
+      "key_terms": ["bypass"]
+    },
+    {
+      "id": "post_008",
+      "category": "post_op_followup",
+      "text": "Ya me pude bañar sin ayuda hoy, solo teniendo cuidado de no mojar directamente los puntos.",
+      "key_terms": ["puntos"]
+    },
+    {
+      "id": "post_009",
+      "category": "post_op_followup",
+      "text": "Me puse hielo en la rodilla por veinte minutos después de los ejercicios y la hinchazón bajó rapidito.",
+      "key_terms": ["hinchazón"]
+    },
+    {
+      "id": "post_010",
+      "category": "post_op_followup",
+      "text": "Anoche dormí seis horas corridas sin necesitar el tramadol, solo con acetaminofén antes de acostarme.",
+      "key_terms": ["tramadol", "acetaminofén"]
+    },
+    {
+      "id": "post_011",
+      "category": "post_op_followup",
+      "text": "Hoy cumplo una semana desde que me sacaron la vesícula y ya estoy tolerando comidas suaves sin dolor.",
+      "key_terms": []
+    },
+    {
+      "id": "post_012",
+      "category": "post_op_followup",
+      "text": "El doctor me dijo que me quitan los puntos el lunes en la oficina si la herida sigue cerrando bien.",
+      "key_terms": ["doctor", "puntos", "herida"]
+    },
+    {
+      "id": "post_013",
+      "category": "post_op_followup",
+      "text": "Me estoy aplicando la pomada antibiótica dos veces al día y la piel alrededor ya no está tan colorada.",
+      "key_terms": ["pomada"]
+    },
+    {
+      "id": "post_014",
+      "category": "post_op_followup",
+      "text": "Hoy me sentí un poco cansado después de la terapia, así que descansé toda la tarde y tomé bastante agua.",
+      "key_terms": ["terapia"]
+    },
+    {
+      "id": "post_015",
+      "category": "post_op_followup",
+      "text": "En general hoy fue un buen día, seguí todas las instrucciones del alta y no tuve ningún síntoma nuevo.",
+      "key_terms": []
+    },
+    {
+      "id": "spg_001",
+      "category": "spanglish_pr",
+      "text": "Hoy me chequié el blood pressure por la mañana y estaba un poquito high, pero después de tomarme el Losartan bajó.",
+      "key_terms": ["blood", "pressure", "losartan"]
+    },
+    {
+      "id": "spg_002",
+      "category": "spanglish_pr",
+      "text": "Llamé a la farmacia para el refill de la prescription y me dijeron que ya el insurance lo aprobó.",
+      "key_terms": ["farmacia", "refill", "prescription"]
+    },
+    {
+      "id": "spg_003",
+      "category": "spanglish_pr",
+      "text": "Desde que empecé la medicina nueva no he tenido casi side effects, solo un poquito de dry mouth por la noche.",
+      "key_terms": ["side", "effects"]
+    },
+    {
+      "id": "spg_004",
+      "category": "spanglish_pr",
+      "text": "El jueves tengo appointment de physical therapy y después paso a recoger los discharge papers en la oficina.",
+      "key_terms": ["appointment", "physical", "therapy"]
+    },
+    {
+      "id": "spg_005",
+      "category": "spanglish_pr",
+      "text": "Anoche casi voy al urgent care por el dolor de pecho, pero descansé, me puse el oximeter y el oxígeno estaba normal.",
+      "key_terms": ["urgent", "care", "oxígeno"]
+    },
+    {
+      "id": "spg_006",
+      "category": "spanglish_pr",
+      "text": "Mi blood sugar en ayunas hoy salió en ciento veinticinco, la insulin pump está funcionando súper bien.",
+      "key_terms": ["blood", "sugar", "ayunas", "insulin"]
+    },
+    {
+      "id": "spg_007",
+      "category": "spanglish_pr",
+      "text": "Me hicieron un X-ray del tobillo en la clínica y gracias a Dios el doctor dijo que no hay fractura.",
+      "key_terms": ["x-ray", "clínica", "doctor"]
+    },
+    {
+      "id": "spg_008",
+      "category": "spanglish_pr",
+      "text": "Todavía estoy esperando el callback de la enfermera para confirmar si tengo que parar el blood thinner antes del procedimiento.",
+      "key_terms": ["blood", "thinner"]
+    },
+    {
+      "id": "spg_009",
+      "category": "spanglish_pr",
+      "text": "El inhaler nuevo me ayuda mucho más rápido cuando me da shortness of breath subiendo las escaleras.",
+      "key_terms": ["inhaler"]
+    },
+    {
+      "id": "spg_010",
+      "category": "spanglish_pr",
+      "text": "Hoy fui al lab a hacerme el fasting blood work y me dijeron que los results salen en el portal mañana.",
+      "key_terms": ["blood", "work"]
+    },
+    {
+      "id": "spg_011",
+      "category": "spanglish_pr",
+      "text": "La doctora me cambió el dosage de la tiroides y me puso un follow-up en seis semanas para recheck.",
+      "key_terms": ["doctora", "tiroides", "follow-up"]
+    },
+    {
+      "id": "spg_012",
+      "category": "spanglish_pr",
+      "text": "El painkiller me dio un poquito de drowsiness hoy, así que no guié y me quedé descansando en casa.",
+      "key_terms": ["painkiller"]
+    },
+    {
+      "id": "vref_003",
+      "category": "voice_ref",
+      "text": "Mira mijo, te dejo este mensajito saliendo ahora mismo de la cita... todo salió bastante bien gracias a Dios, el doctor me revisó la presión, me escuchó el pecho con calma y me explicó los cambios en mis pastillas para este mes.",
+      "key_terms": ["cita", "doctor", "presión", "pastillas"]
+    },
+    {
+      "id": "vref_004",
+      "category": "voice_ref",
+      "text": "Hola familia, acabo de salir del laboratorio y la clínica... estoy un poquito cansado de esperar, pero quería contarles con calma lo que me dijo la doctora sobre los resultados, las recetas nuevas y cuándo me toca la próxima visita.",
+      "key_terms": ["laboratorio", "clínica", "doctora", "recetas"]
+    },
+    {
+      "id": "pvr_001",
+      "category": "post_visit_recap",
+      "text": "Mira mijo, salí ahora del doctor Morales en Auxilio Mutuo... me subió el losartán de cincuenta a cien miligramos porque la presión estaba alta, y tengo que volver el próximo jueves a las nueve de la mañana. ¿Alguien me puede llevar?",
+      "key_terms": ["doctor", "losartán", "miligramos", "presión"]
+    },
+    {
+      "id": "pvr_002",
+      "category": "post_visit_recap",
+      "text": "Hola, acabo de salir de la cita con la doctora Rivera en la clínica de Bayamón... me dejó la metformina de quinientos miligramos igual, pero me mandó laboratorios en ayunas para la semana que viene y pasar por Walgreens a buscar el refill.",
+      "key_terms": ["cita", "doctora", "clínica", "metformina", "miligramos", "laboratorios", "ayunas", "refill"]
+    },
+    {
+      "id": "pvr_003",
+      "category": "post_visit_recap",
+      "text": "Te aviso que salí del hospital San Jorge... el endocrinólogo me ajustó la levotiroxina a setenta y cinco microgramos en ayunas, y me puso el follow-up en seis semanas. Hay que llamar a la farmacia para ver si el plan médico ya la aprobó.",
+      "key_terms": ["hospital", "endocrinólogo", "levotiroxina", "microgramos", "ayunas", "follow-up", "farmacia", "plan"]
+    },
+    {
+      "id": "pvr_004",
+      "category": "post_visit_recap",
+      "text": "Acabo de salir de ver al cardiólogo en Pavía... dijo que las palpitaciones bajaron, pero me cambió el metoprolol a cincuenta miligramos por la mañana y me pidió un electrocardiograma antes de la cita del quince de diciembre.",
+      "key_terms": ["cardiólogo", "palpitaciones", "metoprolol", "miligramos", "electrocardiograma", "cita"]
+    },
+    {
+      "id": "pvr_005",
+      "category": "post_visit_recap",
+      "text": "Mira, fui a la clínica porque tenía fiebre y un catarro fuerte... la doctora me hizo la prueba de influenza, salió negativa, pero me recetó azitromicina de quinientos miligramos por cinco días y jarabe de diez mililitros en la noche.",
+      "key_terms": ["clínica", "fiebre", "catarro", "doctora", "azitromicina", "miligramos", "jarabe", "mililitros"]
+    },
+    {
+      "id": "pvr_006",
+      "category": "post_visit_recap",
+      "text": "Salí del neumólogo en HIMA San Pablo... todavía tengo un poquito de fatiga cuando subo las escaleras, así que me dejó la bomba de albuterol y me añadió montelukast de diez miligramos. Me toca volver en un mes.",
+      "key_terms": ["neumólogo", "fatiga", "bomba", "albuterol", "montelukast", "miligramos"]
+    },
+    {
+      "id": "pvr_007",
+      "category": "post_visit_recap",
+      "text": "Hola nena, ya terminé en el hospital Menonita... el médico me chequeó la herida de la rodilla, los puntos están sanando bien, y me dijo que empiece physical therapy el lunes que viene a las diez. Necesito pon para allá.",
+      "key_terms": ["hospital", "médico", "herida", "puntos", "physical", "therapy"]
+    },
+    {
+      "id": "pvr_008",
+      "category": "post_visit_recap",
+      "text": "Estuve toda la mañana en Centro Médico... me hicieron una placa del pecho y un sonograma abdominal. El doctor dijo que todo se ve tranquilo pero quiere verme en dos semanas para discutir los resultados.",
+      "key_terms": ["placa", "sonograma", "doctor"]
+    },
+    {
+      "id": "pvr_009",
+      "category": "post_visit_recap",
+      "text": "Saliendo de la oficina de la doctora Ortiz en Carolina... me bajó la atorvastatina a veinte miligramos porque me daban calambres en las piernas, y me dio la orden para recoger la receta nueva en CVS hoy por la tarde.",
+      "key_terms": ["doctora", "atorvastatina", "miligramos", "calambres", "receta"]
+    },
+    {
+      "id": "pvr_010",
+      "category": "post_visit_recap",
+      "text": "Mira, te cuento rápido que el doctor me chequeó los tobillos hinchados... me recetó furosemida de veinte miligramos por la mañana y me dijo que me pese todos los días. Tengo que volver el viernes que viene para chequearme otra vez.",
+      "key_terms": ["doctor", "furosemida", "miligramos"]
+    },
+    {
+      "id": "pvr_011",
+      "category": "post_visit_recap",
+      "text": "Acabo de salir de la doctora de medicina primaria en Ponce... el azúcar en ayunas salió un poquito alta, así que me añadió jardiance de diez miligramos y me pidió blood work en cuatro semanas. ¿Me puedes recoger las pastillas en Farmacia Caridad?",
+      "key_terms": ["doctora", "azúcar", "ayunas", "jardiance", "miligramos", "blood", "pastillas"]
+    },
+    {
+      "id": "pvr_012",
+      "category": "post_visit_recap",
+      "text": "Familia, salí de la cita de seguimiento en Mayagüez... me quitaron el ibuprofeno por la acidez y me dejaron omeprazol de cuarenta miligramos antes del desayuno. El doctor dijo que si el dolor de estómago sigue, llame a la oficina mañana.",
+      "key_terms": ["cita", "seguimiento", "ibuprofeno", "acidez", "omeprazol", "miligramos", "doctor"]
+    },
+    {
+      "id": "pvr_013",
+      "category": "post_visit_recap",
+      "text": "Espérate que te cuento... en la clínica me dijeron que tengo que hacerme un CT scan con contraste en el hospital la semana que viene, y el plan médico pide autorización previa. ¿Alguien me ayuda a llamar al plan mañana temprano?",
+      "key_terms": ["clínica", "ct", "scan", "hospital", "plan"]
+    },
+    {
+      "id": "pvr_014",
+      "category": "post_visit_recap",
+      "text": "Salí ahora del doctor en Caguas... me subió la insulina basal a veintidós unidades antes de acostarme porque las lecturas estaban altas. Me citó para dentro de tres semanas a las ocho y media de la mañana.",
+      "key_terms": ["doctor", "insulina", "unidades"]
+    },
+    {
+      "id": "pvr_015",
+      "category": "post_visit_recap",
+      "text": "Mira, fui al urgent care porque amanecí con fiebre, escalofríos y mucha tos con flema... me dieron amoxicilina de quinientos miligramos cada ocho horas y me dijeron que descanse mucho y tome agua.",
+      "key_terms": ["urgent", "care", "fiebre", "escalofríos", "tos", "flema", "amoxicilina", "miligramos"]
+    },
+    {
+      "id": "pvr_016",
+      "category": "post_visit_recap",
+      "text": "Ya salí del especialista en San Juan... me dejó la gabapentina de trescientos miligramos en la noche para el hormigueo en los pies, y me mandó a hacerme un MRI de la espalda baja. Hay que sacar la cita en el centro de imágenes.",
+      "key_terms": ["especialista", "gabapentina", "miligramos", "hormigueo", "mri", "cita"]
+    },
+    {
+      "id": "pvr_017",
+      "category": "post_visit_recap",
+      "text": "Hola mijo, la doctora me dijo que no pare el clopidogrel de setenta y cinco miligramos ni la aspirina de ochenta y un miligramos... todo está estable con el stent, y el próximo follow-up es en dos meses en el consultorio de Guaynabo.",
+      "key_terms": ["doctora", "clopidogrel", "miligramos", "aspirina", "stent", "follow-up"]
+    },
+    {
+      "id": "pvr_018",
+      "category": "post_visit_recap",
+      "text": "Acabo de salir de la cita y estoy en el parking... el doctor me dio prednisona de diez miligramos por cinco días para la inflamación del hombro, y me dijo que si me da mareo fuerte o dolor de pecho vaya directo a emergencias.",
+      "key_terms": ["cita", "doctor", "prednisona", "miligramos", "inflamación", "mareo", "emergencias"]
+    },
+    {
+      "id": "pvr_019",
+      "category": "post_visit_recap",
+      "text": "Te dejo saber que hoy fui al laboratorio de Trujillo Alto a hacerme los análisis de colesterol y tiroides... me dijeron que los resultados le llegan al doctor mañana y tengo cita el martes que viene a la una de la tarde.",
+      "key_terms": ["laboratorio", "análisis", "colesterol", "tiroides", "doctor", "cita"]
+    },
+    {
+      "id": "pvr_020",
+      "category": "post_visit_recap",
+      "text": "Mira, salí de la farmacia después de ver al doctor... el copay del ozempic subió bastante y me dijeron que falta el refill de la amlodipina de cinco miligramos. ¿Puedes pasar mañana por Walgreens de Bayamón a preguntar?",
+      "key_terms": ["farmacia", "doctor", "copay", "ozempic", "refill", "amlodipina", "miligramos"]
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es-PR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="referrer" content="no-referrer" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' blob:; connect-src 'self' https://script.google.com https://*.googleusercontent.com blob:; object-src 'none'; base-uri 'self'; form-action 'self';"
+  />
+  <title>Grabadora de Voz — Español PR Médico</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="badge" id="modeBadge">Modo Local</div>
+      <h1>Voces PR — Actualizaciones Médicas</h1>
+      <p class="subtitle">Ayúdanos a entrenar un modelo abierto de reconocimiento de voz en español puertorriqueño.</p>
+    </header>
+
+    <!-- Onboarding / Consent Card -->
+    <section id="setupCard" class="card">
+      <h2>Antes de empezar</h2>
+      <p class="note">
+        Todas las frases son <strong>ficticias</strong> (resúmenes diarios después de ir al médico).
+        Por favor, <strong>no digas datos médicos reales ni nombres personales</strong>.
+      </p>
+
+      <label class="field">
+        <span>Tu apodo o código (sin nombre real) *</span>
+        <input id="speakerId" type="text" placeholder="ej. maria_sj, carlos_ponce" autocomplete="off" required />
+      </label>
+
+      <div class="row">
+        <label class="field">
+          <span>Región de PR</span>
+          <select id="region">
+            <option value="metro">Área Metro</option>
+            <option value="norte">Norte</option>
+            <option value="sur">Sur</option>
+            <option value="oeste">Oeste</option>
+            <option value="este">Este</option>
+            <option value="centro">Centro / Montaña</option>
+            <option value="diaspora">Diáspora (EE.UU.)</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Edad</span>
+          <select id="ageGroup">
+            <option value="18-29">18–29</option>
+            <option value="30-44">30–44</option>
+            <option value="45-59">45–59</option>
+            <option value="60+">60+</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="field" id="pinField">
+        <span>PIN de acceso *</span>
+        <input id="pinInput" type="password" placeholder="PIN compartido" autocomplete="off" />
+      </label>
+
+      <label class="field">
+        <span>¿Cuántas frases quieres grabar hoy?</span>
+        <select id="sessionCount">
+          <option value="10">10 frases (~2 min)</option>
+          <option value="25" selected>25 frases (~5 min)</option>
+          <option value="50">50 frases (~10 min)</option>
+          <option value="114">Todas (114 frases)</option>
+        </select>
+      </label>
+
+      <label class="checkbox">
+        <input id="consentCheck" type="checkbox" />
+        <span>
+          Confirmo que soy mayor de 18 años, que leeré frases ficticias y que doy permiso
+          para usar mis grabaciones de voz para entrenar un modelo de transcripción (STT).
+        </span>
+      </label>
+
+      <button id="startBtn" class="btn primary full" disabled>Comenzar a grabar</button>
+      <p id="setupError" class="error hidden"></p>
+    </section>
+
+    <!-- Recording Card -->
+    <section id="recordCard" class="card hidden">
+      <div class="progress-row">
+        <span id="progressText">Frase 1 de 25</span>
+        <span id="categoryBadge" class="pill">medications</span>
+      </div>
+      <div class="progress-bar">
+        <div id="progressFill" class="progress-fill" style="width: 0%"></div>
+      </div>
+
+      <p class="tip">
+        💡 Háblalo natural, como si dejaras un mensaje de voz desde tu casa.
+      </p>
+
+      <div class="prompt-box">
+        <p id="promptText">Cargando frase...</p>
+      </div>
+
+      <div class="meter-wrap">
+        <div id="levelBar" class="level-bar"></div>
+      </div>
+      <div class="timer" id="timerText">00:00</div>
+
+      <div class="controls">
+        <button id="recordBtn" class="btn record full">🎙️ Grabar</button>
+      </div>
+
+      <div id="reviewSection" class="review hidden">
+        <audio id="audioPlayback" controls></audio>
+        <div class="btn-row">
+          <button id="retryBtn" class="btn secondary">🔄 Repetir</button>
+          <button id="uploadBtn" class="btn primary">⬆️ Guardar y Siguiente</button>
+        </div>
+      </div>
+
+      <div class="footer-actions">
+        <button id="skipBtn" class="btn ghost">Saltar esta frase →</button>
+        <button id="changeUserBtn" class="btn ghost">Cambiar usuario</button>
+      </div>
+
+      <p id="statusMsg" class="status"></p>
+    </section>
+
+    <!-- Done Card -->
+    <section id="doneCard" class="card hidden">
+      <h2>🎉 ¡Mil gracias!</h2>
+      <p id="doneSummary">Completaste tu sesión de grabaciones.</p>
+      <button id="moreBtn" class="btn primary full">Grabar más frases</button>
+    </section>
+  </main>
+
+  <script src="config.js?v=3"></script>
+  <script src="app.js?v=3"></script>
+</body>
+</html>
