@@ -68,21 +68,17 @@
     el.addEventListener("change", validateSetup);
   });
 
-  function hashString(str) {
-    let h = 2166136261;
-    for (let i = 0; i < str.length; i++) {
-      h ^= str.charCodeAt(i);
-      h = Math.imul(h, 16777619);
-    }
-    return h >>> 0;
-  }
-
-  function seededShuffle(items, seed) {
+  function randomShuffle(items) {
     const arr = items.slice();
-    let s = seed || 1;
     for (let i = arr.length - 1; i > 0; i--) {
-      s = (Math.imul(1664525, s) + 1013904223) >>> 0;
-      const j = s % (i + 1);
+      let j;
+      if (window.crypto && window.crypto.getRandomValues) {
+        const buf = new Uint32Array(1);
+        window.crypto.getRandomValues(buf);
+        j = buf[0] % (i + 1);
+      } else {
+        j = Math.floor(Math.random() * (i + 1));
+      }
       [arr[i], arr[j]] = [arr[j], arr[i]];
     }
     return arr;
@@ -107,13 +103,40 @@
     const remaining = allPrompts.filter((p) => !done.has(p.id));
     const pool = remaining.length > 0 ? remaining : allPrompts;
 
-    const voiceRefs = pool.filter((p) => p.category === "voice_ref");
-    const others = seededShuffle(
-      pool.filter((p) => p.category !== "voice_ref"),
-      hashString(speakerId)
-    );
-    const ordered = [...voiceRefs.slice(0, 1), ...others];
-    return ordered.slice(0, Math.min(count, ordered.length));
+    // 1) Pick 1 random voice_ref seed first (diversifies across all 4 voice seeds)
+    const voiceRefs = randomShuffle(pool.filter((p) => p.category === "voice_ref"));
+    const selected = voiceRefs.length > 0 ? [voiceRefs[0]] : [];
+
+    // 2) Stratified round-robin across all other categories so every 25-prompt session
+    //    covers post_visit_recap, medications, vitals, symptoms, pharmacy, post_op, and spanglish evenly.
+    const byCat = new Map();
+    for (const p of pool) {
+      if (p.category === "voice_ref") continue;
+      if (!byCat.has(p.category)) byCat.set(p.category, []);
+      byCat.get(p.category).push(p);
+    }
+    for (const [cat, list] of byCat.entries()) {
+      byCat.set(cat, randomShuffle(list));
+    }
+
+    const pickedOthers = [];
+    const targetOthers = Math.max(0, Math.min(count, pool.length) - selected.length);
+    const catKeys = [...byCat.keys()];
+    while (pickedOthers.length < targetOthers) {
+      let addedAny = false;
+      for (const cat of randomShuffle(catKeys)) {
+        const bucket = byCat.get(cat);
+        if (bucket && bucket.length > 0) {
+          pickedOthers.push(bucket.pop());
+          addedAny = true;
+          if (pickedOthers.length >= targetOthers) break;
+        }
+      }
+      if (!addedAny) break;
+    }
+
+    // 3) Shuffle the selected non-voice_ref prompts so category order isn't predictable
+    return [...selected, ...randomShuffle(pickedOthers)];
   }
 
   function showPrompt() {
